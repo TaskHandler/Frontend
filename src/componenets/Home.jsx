@@ -1,19 +1,25 @@
 import React from 'react'
 import styled from 'styled-components';
 import { MdAdd } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 
 const Container = styled.div`
-    padding: 5%;
+    padding: 2%;
+    padding-left: 5%;
+    padding-top: 20px;
 `;
 
 const HeaderContaniner = styled.div`
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 10px;
-    width: 80rem;
+    width: 90%;
     height: 3rem;
     background-color: #B4CFB0;
     border-radius: 50px;
+    @media (max-width:950px) {
+        height: 3rem;
+    }
 `;
 
 const FlexContainer = styled.div`
@@ -26,10 +32,14 @@ const AddContainer = styled.div`
     width: 6rem;
     border-radius: 100px;
     position: relative;
-    top: -15px;
+    top: 5px;
     left: -50px;
     background-color: #B4CFB0;
     cursor: pointer;
+    @media (max-width:950px) {
+        height: 0   rem;
+        width: 0rem;
+    }
 `;
 
 const P = styled.p`
@@ -46,16 +56,25 @@ const AddIcon = styled(MdAdd)`
     padding-top: 0.4rem;
     padding-left: 0.6rem;
     color: #5b6d3f;
+    position: relative;
+    @media (max-width:950px) {
+        height: 3rem;
+        width: 3rem;
+        right: 10px;
+        top: 18px;
+    }
 `;
 
 function Home(){
+    let navigate = useNavigate();
     return(
         <Container>
             <FlexContainer>
                 <HeaderContaniner>
                     <P>Latest Added Task</P>
                 </HeaderContaniner>
-                <AddContainer>
+                <AddContainer onClick={()=>{
+                            navigate('addtask',{replace:false})}}>
                     <AddIcon />
                 </AddContainer>
             </FlexContainer>
@@ -63,7 +82,8 @@ function Home(){
                 <HeaderContaniner>
                     <P>Latest Added Employee</P>
                 </HeaderContaniner>
-                <AddContainer>
+                <AddContainer onClick={()=>{
+                            navigate('addemployee',{replace:false})}}>
                     <AddIcon />
                 </AddContainer>
             </FlexContainer>

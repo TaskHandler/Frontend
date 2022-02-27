@@ -1,5 +1,5 @@
 import react from"react"
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Dashboard from "./componenets/Dashboard";
 import Login from "./componenets/Login";
 
