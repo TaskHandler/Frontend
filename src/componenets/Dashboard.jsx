@@ -172,6 +172,7 @@ const LogoutIcon = styled(FiLogOut)`
 const TitleDiv = styled.div`
     display: flex;
     margin-top: 20px;
+    :hover{}
 `;
 const TitleDiv2 = styled.div`
     display: flex;

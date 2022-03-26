@@ -74,7 +74,7 @@ function Home(){
                     <P>Latest Added Task</P>
                 </HeaderContaniner>
                 <AddContainer onClick={()=>{
-                            navigate('addtask',{replace:false})}}>
+                            navigate('addtask',{replace:true})}}>
                     <AddIcon />
                 </AddContainer>
             </FlexContainer>
@@ -83,7 +83,7 @@ function Home(){
                     <P>Latest Added Employee</P>
                 </HeaderContaniner>
                 <AddContainer onClick={()=>{
-                            navigate('addemployee',{replace:false})}}>
+                            navigate('addemployee',{replace:true})}}>
                     <AddIcon />
                 </AddContainer>
             </FlexContainer>
